@@ -12,6 +12,89 @@ app.get('/req', (req, res) => {
     res.send('Yo!')
 })
 
+app.get('/meunome', (req, res) => {
+  console.log("Just got a request!")
+  res.send('Meu nome é Rebeca Soares Nascimento')
+})
+
+app.get('/tico', (req, res) => {
+  console.log("Just got a request!")
+  res.send('teco')
+})
+
+app.get('/pokemons', (req, res) => {
+  console.log("Just got a request!")
+  res.send([
+    {
+      "pokemon": "Pikachu",
+      "episodio": "Pokémon, I Choose You!",
+      "temporada": 1,
+      "descricao": "Pikachu foi dado a Ash antes de sua jornada começar."
+    },
+    {
+      "pokemon": "Caterpie",
+      "episodio": "Caterpie's Caterpillar",
+      "temporada": 1,
+      "descricao": "Caterpie foi o primeiro Pokémon que Ash capturou durante sua jornada."
+    },
+    {
+      "pokemon": "Pidgeotto",
+      "episodio": "Ash Catches a Pokémon",
+      "temporada": 1,
+      "descricao": "Pidgeotto foi o segundo Pokémon capturado por Ash na região de Kanto."
+    },
+    {
+      "pokemon": "Charmander",
+      "episodio": "Charmander – The Stray Pokémon",
+      "temporada": 1,
+      "descricao": "Charmander foi resgatado por Ash após ser abandonado por seu treinador."
+    },
+    {
+      "pokemon": "Squirtle",
+      "episodio": "Here Comes the Squirtle Squad",
+      "temporada": 1,
+      "descricao": "Squirtle foi parte do Squirtle Squad, mas se uniu a Ash."
+    },
+    {
+      "pokemon": "Bulbasaur",
+      "episodio": "Bulbasaur and the Hidden Village",
+      "temporada": 1,
+      "descricao": "Bulbasaur foi capturado por Ash em uma floresta."
+    },
+    {
+      "pokemon": "Butterfree",
+      "episodio": "Bye Bye Butterfree",
+      "temporada": 1,
+      "descricao": "Butterfree evoluiu de Caterpie e foi o primeiro Pokémon de Ash a evoluir."
+    },
+    {
+      "pokemon": "Primeape",
+      "episodio": "Primeape Goes Bananas",
+      "temporada": 1,
+      "descricao": "Primeape foi capturado após uma luta intensa, mas Ash o deixou para treinamento."
+    },
+    {
+      "pokemon": "Krabby",
+      "episodio": "Showdown at the PokéCorral",
+      "temporada": 1,
+      "descricao": "Krabby foi capturado por Ash e logo evoluiu para Kingler."
+    },
+    {
+      "pokemon": "Kingler",
+      "episodio": "The Bridge Bike Gang",
+      "temporada": 1,
+      "descricao": "Kingler evoluiu de Krabby e participou de várias batalhas importantes."
+    }
+  ]
+  )
+})
+
+app.get('/series', (req, res) => {
+  console.log("Just got a request!")
+  res.send('Brooklyn Nine-Nine, Shadow and Bone, Percy Jackson and the Olympians')
+})
+
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
 
