@@ -89,9 +89,20 @@ app.get('/pokemons', (req, res) => {
   )
 })
 
-app.get('/series', (req, res) => {
+app.post('/series', (req, res) => {
   console.log("Just got a request!")
-  res.send('Brooklyn Nine-Nine, Shadow and Bone, Percy Jackson and the Olympians')
+  res.send([
+    {
+      "nome" : "Brooklyn Nine-Nine"
+    },
+    {
+      "nome" : "Shadow and Bone"
+    },
+    {
+      "nome": "Percy Jackson and the Olympians"
+    }
+  ]
+  )
 })
 
 
